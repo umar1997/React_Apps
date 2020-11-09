@@ -1,0 +1,19 @@
+.header {
+	background: $off-black; // Background colour of the Component
+	margin-bottom: $xl-size; // Margin from the next component
+	color: white; // Colour of Text
+	padding: $m-size 0; // Within the component padding
+}
+
+// Block Element Modifier Naming Convention
+.header__title {
+	font-size: $l-size;
+	margin: 0;
+}
+
+.header__subtitle {
+	color: $off-white;
+	font-size: $m-size;
+	font-weight: 500;
+	margin: 0;
+}
