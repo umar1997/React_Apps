@@ -1,0 +1,18 @@
+- This is for scss
+npm install  node-sass@4.14.1
+npm i normalize.css
+
+npm install --save react-router-dom
+npm install redux
+
+- This is for unique id's
+npm install uuid       
+
+- Connector between react and redux
+npm install react-redux
+
+- For time
+npm install --save moment
+- For date picker (and its dependency)
+npm install react-dates@12.7.0
+npm i react-addons-shallow-compare@15.6.0
