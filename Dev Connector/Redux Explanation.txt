@@ -1,0 +1,69 @@
+# Register.js
+In auth/Register.js we brought in connect which works with Redux
+$ import { connect } from 'react-redux';
+Also bring in setAlert action from actions/alert
+$ import { setAlert } from '../../actions/alert';
+
+# Register.js
+Below we export connect(Register) and add setAlert action to use it which
+is then available within props for Register
+$ export default connect(null, { setAlert })(Register);
+
+# Register.js
+We destructured it in the Register.js
+$ const Register = ({ setAlert })
+
+# Register.js
+We give setALert when passwords dont match then we give it msg and type
+$ setAlert('Passwords do not match', 'danger');
+
+# actions/Alert.js
+We send the message and the alert type which dispatches and action
+ $ export const setAlert = (msg, alertType, timeout = 5000) => dispatch => {
+  const id = uuidv4();
+  dispatch({
+    type: SET_ALERT,
+    payload: { msg, alertType, id }
+  });
+
+  setTimeout(() => dispatch({ type: REMOVE_ALERT, payload: id }), timeout);
+};
+
+# reducers/Alert.js
+In reducer we take care of the dispatched action SET_ALERT
+$ function alertReducer(state = initialState, action) {
+  const { type, payload } = action;
+
+  switch (type) {
+    case SET_ALERT:
+      return [...state, payload];
+    case REMOVE_ALERT:
+      return state.filter((alert) => alert.id !== payload);
+    default:
+      return state;
+  }
+}
+export default alertReducer;
+
+
+# Components/Alert.js
+The alert component is getting that state in mapStateToProps
+where is gets state.alert from reducers/index.js
+$ const Alert = ({ alerts }) =>
+  alerts.map((alert) => (
+    <div key={alert.id} className={`alert alert-${alert.alertType}`}>
+      {alert.msg}
+    </div>
+  ));
+
+// Here we are assigning types to the props
+Alert.propTypes = {
+  alerts: PropTypes.array.isRequired
+};
+
+// When want to fetch the state into the component we use this
+const mapStateToProps = (state) => ({
+  alerts: state.alert
+});
+
+export default connect(mapStateToProps)(Alert);
