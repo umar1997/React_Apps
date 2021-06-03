@@ -1,0 +1,37 @@
+flex
+# Puts everything in a row
+
+    For vertical alignment
+    - flex items-center
+    - flex items-end
+
+justify
+    - between   # Puts things at extreme ends
+    - evenly    # Has equal spacing between all
+    - around    # Code to check
+    - center
+    - start, end
+
+- relative      # 
+- absolute      # Readmore example, they have to be under a relative component
+
+Font
+    - Size      # https://tailwindcss.com/docs/font-size
+    - Colour    # https://tailwindcss.com/docs/text-color
+    - uppercase # font-bold uppercase
+    - bold      # bold, semibold, light
+
+Padding (Inside element)
+    - All over      # p-4 On all sides
+    - On Y axis     # py-4 On top and bottom
+    - On X axis     # py-4  On Right and Left
+    - Top, Bottom, Right, Left  # pt, pb, pr, pl
+
+Margin (Outside Element)
+    - Same as padding
+
+Border
+    - https://tailwindcss.com/docs/border-width
+
+Config
+    - https://www.youtube.com/watch?v=6UVQlB1eo5A&list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw&index=5&ab_channel=TheNetNinja

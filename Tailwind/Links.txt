@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=w0KZhi3DD-0&list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw&index=3&ab_channel=TheNetNinja
+
+https://tailwindcss.com/docs/guides/create-react-app
+npx tailwindcss --full
