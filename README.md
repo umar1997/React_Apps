@@ -2,7 +2,7 @@
 Code for React Apps
 
 
-https://budget-app.mead.io/dashboard
+https://budget-app.mead.io/
 
 
 https://indecision.mead.io/
